@@ -6,21 +6,24 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      projects : [
-        {
-          title : 'Iphone',
-          category : 'Mobile development'
-        },
-        {
-          title : 'Java',
-          category : 'Desktop Development'
-        },
-        {
-          title : 'Spring',
-          category : 'Framework'
-        }
-      ]
+      projects : []
     }
+  }
+  componentWillMount(){
+    //Life cycle method
+    this.setState({projects : [ {
+      title : 'Iphone',
+      category : 'Mobile development'
+    },
+    {
+      title : 'Java',
+      category : 'Desktop Development'
+    },
+    {
+      title : 'Spring',
+      category : 'Framework'
+    }]
+  })
   }
   render() {
     return (
